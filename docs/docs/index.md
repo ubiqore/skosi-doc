@@ -2,7 +2,7 @@
 
 <!-- For full documentation visit [mkdocs.org](http://mkdocs.org). -->
 
-## Rest Services
+## Rest Services (JSON)
 ### Structure 
 
 ### JSON Services
