@@ -90,7 +90,15 @@
     
         <li class="main active"><a href="#skosi-version-10-neandertal">SKOSI version 1.0 (neandertal)</a></li>
         
-            <li><a href="#rest-services">REST Services</a></li>
+            <li><a href="#json-ld-rest-services">JSON-LD Rest Services</a></li>
+        
+            <li><a href="#json-rest-services">JSON Rest Services</a></li>
+        
+            <li><a href="#query-services">Query Services</a></li>
+        
+            <li><a href="#schemes">schemes</a></li>
+        
+            <li><a href="#collections">collections</a></li>
         
     
     </ul>
@@ -99,21 +107,21 @@
 
 <h1 id="skosi-version-10-neandertal">SKOSI version <code>1.0</code> (neandertal)</h1>
 <p><a href="..">GO Back Home</a></p>
-<h2 id="rest-services">REST Services</h2>
+<p>REST Services</p>
 <p>SKOSI provides REST services , with JSON data as results.
 2 kinds of JSON data are exposed.</p>
 <ul>
 <li>JSON-LD : return some SKOS RDF triples.</li>
 <li>JSON  : return some SKOS Object-Oriented.</li>
 </ul>
-<h3 id="1-json-ld-rest-services">1. JSON-LD Rest Services</h3>
+<h2 id="json-ld-rest-services">JSON-LD Rest Services</h2>
 <p><em>to be done.</em> </p>
-<h3 id="2-json-rest-services">2. JSON Rest Services</h3>
-<h4 id="21-data-model">2.1 Data Model</h4>
+<h2 id="json-rest-services">JSON Rest Services</h2>
+<p><strong>Data Model</strong></p>
 <p>The Data Model is an java implementation of SKOS entities and their relations.
 Download the java implementation of SKOS used in SKOSI. 
 (skosimpl)</p>
-<h4 id="22-rest-url-structure">2.2 Rest URL Structure</h4>
+<p><strong>Rest URL Structure</strong></p>
 <p>All services are based on : </p>
 <ul>
 <li>
@@ -140,9 +148,9 @@ Download the java implementation of SKOS used in SKOSI.
 <pre class="prettyprint well"><code>http://localhost:8080/skosi-demo/[......]/SNOMED-CT%5B1415178655232%5D
 </code></pre>
 
-<h4 id="23-query-services">2.3 Query Services</h4>
+<h2 id="query-services">Query Services</h2>
 <p>basic URL  : domain/skosi/<strong>services/rest/query</strong>/test/</p>
-<p>2.3.1 schemes</p>
+<h2 id="schemes">schemes</h2>
 <p>Goal : provide an array of the ConceptSchemes entities from the resource.</p>
 <p>URL : domain/app/services/rest/query/test/<strong>schemes?format=json</strong></p>
 <p>Path  = <strong>schemes</strong></p>
@@ -158,6 +166,23 @@ Download the java implementation of SKOS used in SKOSI.
 </ul>
 <p>SKOSI Viewer Example :    </p>
 <p><img alt="Screenshot" src="../img/schemes-example.png" /></p>
+<h2 id="collections">collections</h2>
+<p>Goal : provide an array of Root collections/orderedCollections entities.
+<code>Root</code> means here that entities inside this array are not related to any other entities inside the resource as the object of a subject-predicate-object relation.</p>
+<p>URL : domain/app/services/rest/query/test/<strong>schemes?format=json</strong></p>
+<p>Path  = <strong>collections</strong></p>
+<p>Query Parameters :</p>
+<ul>
+<li>format (format=json) (Required)</li>
+</ul>
+<p>Notes : These Collections objects only contain information about :</p>
+<ul>
+<li>SKOS Lexical Labels. (<a href="http://www.w3.org/TR/skos-reference/#labels">ref</a>)</li>
+<li>SKOS Notations (<a href="http://www.w3.org/TR/skos-reference/#notations">ref</a>)</li>
+<li>SKOS Documentation Properties(<a href="http://www.w3.org/TR/skos-reference/#notes">ref</a>)</li>
+</ul>
+<p>SKOSI Viewer Example :    </p>
+<p><img alt="Screenshot" src="../img/collections-example.png" /></p>
 </div>
         </div>
 
