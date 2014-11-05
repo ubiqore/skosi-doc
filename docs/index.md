@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# SKOSI Documentation
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+The website  [skosi.readthedocs.org](http://skosi.readthedocs.org/) is official SKOSI 
+software documentation. 
+All requests/demands should be sent to eric.sadou AT gmail.com
 
-## Commands
+### VERSIONS
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+* version `1.0` "neandertal"  : [see doc](1.0)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
