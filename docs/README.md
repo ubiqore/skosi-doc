@@ -1,3 +1,7 @@
 ###SKOSI Documentation.
 
-Select a version on the left.
+Welcome to SKOSI Online Documentation.
+
+Actual Version = v1.0 [INITIAL].
+
+
