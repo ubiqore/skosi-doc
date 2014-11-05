@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>Home - SKOSI - doc</title>
+        <title>1.0 - SKOSI - doc</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -53,15 +53,8 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            <li class="active">
-                                <a href=".">Home</a>
-                            </li>
-                        
-                        </ul>
+                    <li class="active">
+                        <a href=".">1.0</a>
                     </li>
                 
                 
@@ -105,8 +98,63 @@
             <div class="col-md-9" role="main">
 
 <h1 id="version-10-neandertal">version <code>1.0</code> neandertal</h1>
+<p><a href="..">GO Back Home</a></p>
 <h2 id="rest-services">REST Services</h2>
-<h3 id="json-rest-services">JSON Rest Services</h3>
+<p>SKOSI provides REST services , with JSON data as results.
+2 kinds of JSON data are exposed.</p>
+<ul>
+<li>JSON-LD : return some SKOS RDF triples.</li>
+<li>JSON  : return some SKOS Object-Oriented.</li>
+</ul>
+<h3 id="1-json-ld-rest-services">1. JSON-LD Rest Services</h3>
+<p><em>to be done.</em> </p>
+<h3 id="2-json-rest-services">2. JSON Rest Services</h3>
+<h4 id="21-data-model">2.1 Data Model</h4>
+<p>The Data Model is an java implementation of SKOS entities and their relations.
+Download the java implementation of SKOS used in SKOSI. 
+(skosimpl)</p>
+<h4 id="22-rest-url-structure">2.2 Rest URL Structure</h4>
+<p>All services are based on : </p>
+<ul>
+<li>
+<p><strong>'Domain of Server':'Port'</strong>     </p>
+<ul>
+<li>ex : <strong>http://localhost:808</strong> </li>
+<li><em>Acronym used in this doc : <code>domain</code></em></li>
+</ul>
+</li>
+<li>
+<p><strong>Application Name.</strong> </p>
+<ul>
+<li>ex : <strong>skosi-demo</strong> </li>
+<li><em>Acronym used in this doc : <code>skosi</code></em> </li>
+</ul>
+</li>
+<li><strong>Resource Id</strong> (URL encoded)<ul>
+<li>ex : <strong>test[1415003529893</strong>]</li>
+<li><em>Acronym in this doc : <code>test</code></em></li>
+</ul>
+</li>
+</ul>
+<p>real example with URL encoded caracters for resource ID :
+http://<strong>localhost:8080</strong>/<strong>skosi-demo</strong>/[......]/<strong>SNOMED-CT%5B1415178655232%5D</strong></p>
+<h4 id="23-query-services">2.3 Query Services</h4>
+<p>basic URL  : domain/skosi/<strong>services/rest/query</strong>/test/</p>
+<p>2.3.1 schemes</p>
+<p>Goal : provide an array of the ConceptSchemes entities from the resource.</p>
+<p>URL : domain/app/services/rest/query/test/<strong>schemes?format=json</strong></p>
+<p>Path  = <strong>schemes</strong></p>
+<p>Query Parameters :</p>
+<ul>
+<li>format (format=json) (Required)</li>
+</ul>
+<p>Notes : These ConceptScheme objects only contain information about :</p>
+<ul>
+<li>SKOS Lexical Labels. (<a href="http://www.w3.org/TR/skos-reference/#labels">ref</a>)</li>
+<li>SKOS Notations (<a href="http://www.w3.org/TR/skos-reference/#notations">ref</a>)</li>
+<li>SKOS Documentation Properties(<a href="http://www.w3.org/TR/skos-reference/#notes">ref</a>)</li>
+</ul>
+<p>SKOSI Viewer Example : </p>
 </div>
         </div>
 

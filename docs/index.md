@@ -6,5 +6,5 @@ All requests/demands should be sent to eric.sadou AT gmail.com
 
 ### VERSIONS
 
-* version `1.0` "neandertal"  : [see doc](1.0)
+* version `1.0` "neandertal"  : [see doc](1.0.md)
 
